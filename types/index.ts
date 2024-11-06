@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 export interface Message {
   id: string;
@@ -33,6 +33,7 @@ export interface Collection {
   nfts: NFT[];
   totalValue?: number;
   floorPrice?: number;
+  benefitPercentage?: number;
 }
 
 export interface Network {
