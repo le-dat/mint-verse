@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { CollectionContainer } from "@/components/collection/CollectionContainer";
-import { NetworkModal } from "@/components/modal/NetworkModal";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
-import { ListingFormData, Network, NFT } from "../../types";
+import { CollectionContainer } from '@/components/collection/CollectionContainer';
+import { NetworkModal } from '@/components/modal/NetworkModal';
+import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
+import { ListingFormData, Network, NFT } from '../../types';
 
 export default function ChatPage() {
   const { toast } = useToast();
@@ -19,7 +19,7 @@ export default function ChatPage() {
       setPendingNFT(null);
 
       toast({
-        title: "NFT Created Successfully",
+        title: 'NFT Created Successfully',
         description: `Your NFT has been deployed to ${network.name}`,
       });
     }
@@ -39,14 +39,14 @@ export default function ChatPage() {
     );
 
     toast({
-      title: "NFT Listed Successfully",
+      title: 'NFT Listed Successfully',
       description: `${data.name} has been listed on OpenSea for ${data.price} ETH`,
     });
   };
 
   return (
-    <div className="flex h-screen bg-gradient-to-b from-background to-secondary">
-      <div className="flex flex-col w-full max-w-6xl mx-auto p-4">
+    <div className='flex h-screen bg-transparent'>
+      <div className='flex flex-col w-full max-w-6xl mx-auto p-4'>
         <CollectionContainer nfts={nfts} onListNFT={handleListNFT} />
 
         <NetworkModal

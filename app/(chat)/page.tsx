@@ -100,7 +100,7 @@ export default function ChatPage() {
   };
 
   return (
-    <div className='flex h-[calc(100vh-80px)] p-4 overflow-hidden'>
+    <div className='flex h-[calc(100vh-80px)] md:p-0 p-4 overflow-hidden'>
       <ChatContainer
         messages={messages}
         onSend={handleSend}

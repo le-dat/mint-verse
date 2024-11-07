@@ -1,18 +1,19 @@
-"use client";
+'use client';
 
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
-import { MarketplaceContainer } from "../../components/marketplace/MarketplaceContainer";
-import { MARKETPLACE_NFTS } from "../../data/sample";
-import { MarketplaceFilters, NFT } from "../../types";
+import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
+import { MarketplaceContainer } from '../../components/marketplace/MarketplaceContainer';
+import { MARKETPLACE_NFTS } from '../../data/sample';
+import { MarketplaceFilters, NFT } from '../../types';
 
 export default function ChatPage() {
   const { toast } = useToast();
   const [nfts, setNfts] = useState<NFT[]>([]);
-  const [marketplaceFilters, setMarketplaceFilters] = useState<MarketplaceFilters>({
-    search: "",
-    sortBy: "popular",
-  });
+  const [marketplaceFilters, setMarketplaceFilters] =
+    useState<MarketplaceFilters>({
+      search: '',
+      sortBy: 'popular',
+    });
 
   const handleBuyNFT = (nft: NFT) => {
     setNfts((prev) => [
@@ -25,13 +26,13 @@ export default function ChatPage() {
     ]);
 
     toast({
-      title: "NFT Purchased Successfully",
+      title: 'NFT Purchased Successfully',
       description: `${nft.name} has been added to your collection`,
     });
   };
 
   return (
-    <div className="flex bg-gradient-to-b from-background to-secondary">
+    <div className='flex bg-white/30 dark:bg-transparent backdrop-blur-sm'>
       <MarketplaceContainer
         nfts={MARKETPLACE_NFTS}
         filters={marketplaceFilters}

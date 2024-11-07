@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.className} bg-gradient-to-b from-background to-secondary`}
+        className={`${inter.className} dark:bg-[url("/icons/shared/background.svg")] bg-[url("/images/shared/light-background.jfif")]`}
       >
         <Header />
-        <div className='pt-20 max-w-[1280px] mx-auto'>{children}</div>
+        <div className='pt-20 container mx-auto'>{children}</div>
       </body>
     </html>
   );
