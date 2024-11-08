@@ -11,8 +11,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -78,10 +77,33 @@ const config: Config = {
             height: '0',
           },
         },
+        moveAround: {
+          '0%': {
+            top: '0',
+            left: '0',
+          },
+          '42%': {
+            top: '0',
+            left: 'calc(100% - 12px)',
+          },
+          '50%': {
+            top: 'calc(100% - 12px)',
+            left: 'calc(100% - 12px)',
+          },
+          '92%': {
+            top: 'calc(100% - 12px)',
+            left: '0',
+          },
+          '100%': {
+            top: '0',
+            left: '0',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        moveAround: 'moveAround 10s linear infinite',
       },
     },
   },

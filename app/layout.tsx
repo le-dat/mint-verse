@@ -10,18 +10,14 @@ export const metadata: Metadata = {
   description: 'Mint NFTs using voice or text commands',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
-        className={`${inter.className} dark:bg-[url("/icons/shared/background.svg")] bg-[url("/images/shared/light-background.jfif")]`}
+        className={`${inter.className} dark:bg-[url("/icons/shared/background.svg")] bg-[url("/images/shared/light-background.jfif")] bg-cover`}
       >
         <Header />
-        <div className='pt-20 container mx-auto'>{children}</div>
+        <div className="pt-20 container mx-auto">{children}</div>
       </body>
     </html>
   );
